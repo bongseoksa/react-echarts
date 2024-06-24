@@ -18,6 +18,25 @@ const LineOptions: EChartsOption = {
   yAxis: {
     type: 'value',
   },
+  dataZoom: [
+    {
+      type: 'inside',
+      start: 30, // 0 ~ 100% 사이
+      end: 50, // 0 ~ 100% 사이
+    },
+    {
+      type: 'slider',
+      start: 0,
+      end: 50,
+      xAxisIndex: [0], // 컨트롤 할 데이터 컴포넌트 인덱스
+    },
+    {
+      type: 'slider',
+      start: 10,
+      end: 90,
+      yAxisIndex: [0], // 컨트롤 할 데이터 컴포넌트 인덱스
+    },
+  ],
   series: [
     {
       name: 'Charts',
